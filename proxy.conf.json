@@ -1,0 +1,11 @@
+{
+  "/u21487279": {
+    "target": "https://wheatley.cs.up.ac.za",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {
+      "Host": "wheatley.cs.up.ac.za"
+    }
+  }
+}

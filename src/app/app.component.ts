@@ -1,18 +1,47 @@
 import { Component } from '@angular/core';
+import { MenuController, NavController } from '@ionic/angular';
+import { Storage } from '@ionic/storage-angular';
+import { ToastController } from '@ionic/angular';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public appPages = [
-    { title: 'Inbox', url: '/folder/inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/spam', icon: 'warning' },
+  public appPages = [ //this is for the sidetab
+    { title: 'Cars', url: 'home', icon: 'car' },
+    { title: 'Explore', url: 'search', icon: 'search' },
+    { title: 'Logout', action: 'logout', icon: 'log-out' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-  constructor() {}
+
+  constructor(
+    private menu: MenuController,
+    private navCtrl: NavController,
+    private storage: Storage,
+    private toastController: ToastController
+  ) {}
+
+  async presentToast(message: string) {
+    const toast = await this.toastController.create({
+      message: message,
+      duration: 2000
+    });
+    await toast.present();
+  }
+  
+  logout() {
+    this.storage.create();
+    this.storage.clear().then(() => {
+      this.menu.close();
+      this.navCtrl.navigateRoot('/login'); 
+      this.presentToast("Successfully logged out.");
+    });
+  }
+
+  handleMenuAction(action: any) {
+    if (action === 'logout') {
+      this.logout();
+    }
+  }
 }

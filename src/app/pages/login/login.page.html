@@ -1,0 +1,30 @@
+<ion-content color="medium" class="bg">
+  <div class="centering">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <ion-card color="light" >
+        <ion-card-header>
+          <ion-card-title class="headingFont">Newheel</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <!-- entering email -->
+          <ion-item>
+            <!-- <ion-label position="floating">Email</ion-label> -->
+            <ion-input formControlName="email" class="contentFont" label="Email" labelPlacement="floating" placeholder="john@icloud.com" type="email"></ion-input>
+          </ion-item>
+
+          <!-- entering password -->
+          <ion-item>
+            <!-- <ion-label position="floating">Email</ion-label> -->
+            <ion-input formControlName="password" class="contentFont" label="Password" labelPlacement="floating" type="password"></ion-input>
+          </ion-item>
+
+          <!-- buttonssss -->
+          <ion-button color="medium" size="full" fill="clear" class="contentFont">Forgot Password?</ion-button>
+          <ion-button color="dark" type="submit" size="full" class="contentFont">Login</ion-button>
+          <ion-button color="dark" size="full" class="contentFont" fill="clear">Register</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

@@ -24,3 +24,96 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+@font-face {
+	font-family: 'CODE';
+	src: url('assets/CODE-Light.otf');
+}
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('assets/Raleway-Regular.ttf');
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.sidemenuu{
+	font-family: 'Raleway';
+	background-color: grey;
+}
+
+
+
+.contentFont {
+    font-family: 'Raleway';
+}
+
+.headingFont {
+    font-family: 'CODE';
+    font-weight: bold;
+}
+
+.bg {
+    background-image: url('assets/indexbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.car-picz {
+    font-family: 'Raleway';
+	display: flex;
+	background-color: white;
+	width: 270px;
+	margin: 10px;
+	border-radius: 15px;
+	color: black;
+	height:400px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+.car-img {
+	height: 100%;
+	margin-bottom: 5px;
+	background-size: cover;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+.car-picz h2 {
+	padding: 10px;
+ 	text-align: center;
+}
+
+.car-picz p {
+	font-size: 12px;
+}
+
+.car-picz {
+ 	background-color: #a2a2a2;
+ 	color: white;
+ 	// padding: 20px 35px;
+ 	display: block;
+ 	text-align: center;
+ 	border-radius: 15px;
+ 	width: 270px;
+ 	margin: 10px;
+ 	-webkit-border-radius: 15px;
+ 	-moz-border-radius: 15px;
+ 	-ms-border-radius: 15px;
+ 	-o-border-radius: 15px;
+}
+
+.tooolbar {
+	background-color: #a2a2a2;
+}

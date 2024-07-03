@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="headingFont">Explore</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar class="contentFont" animated="true" placeholder="Search Cars" [(ngModel)]="searchQuery"></ion-searchbar>
+  <ion-button color="medium" class="contentFont" expand="full" (click)="search()">Search</ion-button>
+
+  <ion-list>
+    <main></main>
+    <!-- <ion-item *ngFor="let car of cars">
+      {{ car.make }} {{ car.model }} 
+    </ion-item> -->
+  </ion-list>
+  
+</ion-content>
